@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadiq Khawaja - Biomedical & Computer Science Enthusiast</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'homePage/css/homePage.css' %}">
+    <style>
+        /* Add this style tag to include additional CSS */
+        .card {
+            transition: transform 0.3s ease; /* Smooth transition for transform property */
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Slightly scale up the card on hover */
+            cursor: pointer; /* Change cursor to indicate it's clickable or interactive */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Sadiq Khawaja</h1>
+        <p>Biomedical Sciences & Computer Science Enthusiast</p>
+    </div>
+    
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>My Journey</h2>
+                <h5>A glimpse into my academic and professional path, Updated recently</h5>
+                <div class="fakeimg" style="height:200px;">Image Placeholder</div>
+                <p>A brief overview of Sadiq's journey in the fields of biomedical sciences and computer science, highlighting key milestones and achievements.</p>
+            </div>
+            <a href="{% url 'projects' %}" class="card-link">
+                <div class="card">
+                    <h2>Projects & Research</h2>
+                    <h5>Insights into my current projects and research interests, Updated regularly</h5>
+                    <div class="fakeimg" style="height:200px;">Image Placeholder</div>
+                    <p>Details of ongoing projects and research, focusing on the intersection of biomedical sciences and computer science.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>About Me</h2>
+                <div class="fakeimg" style="height:100px;">Image Placeholder</div>
+                <p>An introduction to Sadiq, including his background, aspirations, and what drives his passion for biomedical sciences and computer science.</p>
+            </div>
+            <div class="card">
+                <h3>Popular Posts</h3>
+                <div class="fakeimg">Image Placeholder</div><br>
+                <div class="fakeimg">Image Placeholder</div><br>
+                <div class="fakeimg">Image Placeholder</div>
+            </div>
+            <div class="card">
+                <h3>Connect with Me</h3>
+                <p>Links to Sadiq's professional profiles and how to get in touch for collaborations and networking.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <h2>Contact Information</h2>
+        <p>Details on how to contact Sadiq for professional inquiries or academic collaborations.</p>
+    </div>
+</body>
+</html>
