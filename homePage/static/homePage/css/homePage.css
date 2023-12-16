@@ -3,20 +3,47 @@
   }
   
   body {
-    font-family: Arial;
+    font-family: Roboto;
     padding: 20px;
-    background:#003366; /* Light Gray */
-    color: #333333; /* Dark Gray for text */
-  }
-  
-  /* Header/Blog Title */
-  .header {
-    padding: 30px;
-    font-size: 40px;
     text-align: center;
-    background: #003366; /* Deep Blue */
-    color: white;
+    background:#282a2b; 
+    color: #a7a3a3; /* Dark Gray for text */
   }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -500px 0;
+    }
+    100% {
+      background-position: 500px 0;
+    }
+  }
+  .shimmering-text {
+    display: inline-block;
+    background: linear-gradient(to right, #a7a3a3 20%, #fff 40%, #a7a3a3 60%);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-fill-color: transparent; /* For Safari */
+    animation: shimmer 4s linear infinite;
+  }
+.header {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    padding-right: 10px;
+    padding-left: 0px;
+    padding-bottom: 155px;
+    font-size: 8vh;
+    text-align: left;
+    background: #282a2b; /* Deep Blue */
+    color: rgb(209, 204, 204);
+}
+
+.header img {
+    margin-left: 20px; /* Adjust the space between the text and the image */
+}
   
   /* Create two unequal columns that floats next to each other */
   /* Left column */
@@ -33,19 +60,25 @@
   }
   
   /* Fake image */
-  .fakeimg {
+  .sadiqImage {
     background-color: #aaa;
-    width: 100%;
-    padding: 20px;
+    width:40%;
+    padding: 2px;
   }
-  
-  /* Add a card effect for articles */
+
   .card {
-    background-color: #008814; /* White background for cards */
-    color: #333333; /* Dark Gray text */
-    padding: 20px;
-    margin-top: 20px;
-  }
+    opacity: 1;
+    background-color: #282a2b;
+    visibility: hidden;
+    transition: opacity 2s, visibility 0.6s;
+    transition-delay: 0.2s;
+    /* other styles for .card */
+}
+
+.card:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
   
   .card-link {
     text-decoration: none;
@@ -65,7 +98,7 @@
   .footer {
     padding: 20px;
     text-align: center;
-    background: #003366; /* Deep Blue */
+    background: #282a2b; /* Deep Blue */
     color: white;
     margin-top: 20px;
   }
