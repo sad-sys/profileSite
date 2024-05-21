@@ -41,6 +41,8 @@
     text-align: left;
     background: #282a2b; /* Deep Blue */
     color: rgb(209, 204, 204);
+
+
 }
 
 .header img {
@@ -67,15 +69,36 @@
     width:40%;
     padding: 2px;
   }
-
+  ul {
+    list-style-type: none; /* Removes the default bullet points */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centers the list items if desired */
+  }
+  
+  li {
+    display: inline-block; /* Aligns items in a horizontal row */
+    margin-right: 20px; /* Adds some space between each list item */
+    color: #a7a3a3; /* Dark gray, similar to other text elements */
+    font-family: 'Roboto', sans-serif; /* Maintains consistent font */
+  }
+  
+  li a {
+    text-decoration: none; /* Removes underline from links */
+    color: #a7a3a3; /* Dark gray, for the text links */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  li a:hover {
+    color: #fff; /* Changes color on hover for visual feedback */
+  }
+  
   .card {
-    opacity: 1;
+    opacity: 0;
     display: flex;
     align-items: left;
     background-color: #282a2b;
-    visibility: hidden;
-    transition: opacity 2s, visibility 1s;
-    transition-delay: 0.2s;
+    transition: opacity 2s, visibility 1s, box-shadow 0.3s;
     /* other styles for .card */
 }
 
@@ -96,6 +119,8 @@
 .card:hover {
     transform: scale(1.02);
     cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    
 }
   
   .card-link {
@@ -104,6 +129,11 @@
     color: white;
   }
 
+  .aboutSection {
+    display: flex;
+    align-items: left;
+
+  }
 
   /* Clear floats after the columns */
   .row:after {

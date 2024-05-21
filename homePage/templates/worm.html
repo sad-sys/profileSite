@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tapered Segmented Worm Simulation</title>
+    <style>
+        #wormBox {
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+            position: relative;
+            overflow: hidden;
+        }
+        .wormSegment {
+            background-color: green;
+            position: absolute;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="wormBox"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const wormBox = document.getElementById('wormBox');
+            const segments = [];
+            const numberOfSegments = 40;
+            let maxSegmentSize = 10; // Maximum segment size near the head
+            let minSegmentSize = 3;  // Minimum segment size near the tail
+
+            // Create worm segments with tapering sizes
+            for (let i = 0; i < numberOfSegments; i++) {
+                let segment = document.createElement('div');
+                segment.className = 'wormSegment';
+                let size = maxSegmentSize - (maxSegmentSize - minSegmentSize) * i / numberOfSegments;
+                segment.style.width = `${size}px`;
+                segment.style.height = `${size}px`;
+                wormBox.appendChild(segment);
+                segments.push(segment);
+            }
+
+            // Positioning and moving the worm
+            let x = 150, y = 150, angle = 0;
+            function moveWorm() {
+                angle += (Math.random() - 0.5) * 0.4; // Change direction randomly
+                x += Math.cos(angle) * 1; // Slower movement
+                y += Math.sin(angle) * 1; // Slower movement
+
+                // Check for boundary collision and adjust angle
+                if (x < 0 || x > wormBox.offsetWidth) {
+                    x = Math.max(0, Math.min(x, wormBox.offsetWidth));
+                    angle += Math.PI; // Turn around
+                }
+                if (y < 0 || y > wormBox.offsetHeight) {
+                    y = Math.max(0, Math.min(y, wormBox.offsetHeight));
+                    angle += Math.PI; // Turn around
+                }
+
+                // Move each segment
+                for (let i = segments.length - 1; i > 0; i--) {
+                    segments[i].style.left = segments[i-1].style.left;
+                    segments[i].style.top = segments[i-1].style.top;
+                }
+
+                // Move the head of the worm
+                segments[0].style.left = x + 'px';
+                segments[0].style.top = y + 'px';
+
+                requestAnimationFrame(moveWorm);
+            }
+
+            moveWorm();
+        });
+    </script>
+</body>
+</html>

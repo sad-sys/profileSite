@@ -16,23 +16,67 @@
             <h1>Khawaja</h1>
         </div>
         <img class = "sadiqImage" src="{% static 'homePage/images/obviouslyMe.png' %}" alt="Sadiq Khawaja">
-        </div>
     </div>
-    <div class="shimmering-text">
+    </div>
+    <div class="shimmering-text" style = "margin-bottom: 10vh;">
         <p>Scroll to view projects</p>
     </div>
-
     <div>
-        
+    
     </div>
-
-    <div class="card" style="margin-top: 10vh;">
+    <ul>
+        <li><a href="default">Updates</a></li>
+        <li><a href="Thoughts">Thoughts</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="{% url 'about' %}">About Me</a></li>
+    </ul>
+    <a href = "https://goldfish-app-pmh37.ondigitalocean.app/" style="color: #a7a3a3; text-decoration: none;">
+    <div class="card">
+        <div>
+            <img class="fakeimg" src="{% static 'homePage/images/scholarAid.png' %}" alt="ScholarAid">
+        </div>       
+        
+        <div class="text-content" style = "text-align: left;">
+            <h2>ScholarAid</h2>
+            <p>Solo development of a Django App that can generate and save flashcards.</p>
+        </div>
+        <div class="text-content">
+            <h2> Skills </h2>
+            <p> Django backend web development </p>
+            <p> Advanced model implementation in Django </p>   
+            <p> LLM Integration </p>
+            <p> OpenAI API integration    </p>
+            <p> Live deployment </p>
+            <h2><i> Click Here to Visit</i></h2>
+            <div class="light">
+                <div class="flare"></div>
+            </div>
+        </div>
+    </div>
+    </a>
+      <div class="card">
+        <div>
+            <img class="fakeimg" src="{% static 'homePage/images/pseudomonas.png' %}" alt="Ohio">
+        </div>       
+        <div class="text-content" style = "text-align: left;">
+            <h2>P.aeruginosa genome exploration</h2>
+            <p>Bioinformatics project where I had to analyse relationships between strains of P.aeruginosa</p>
+        </div>
+        <div class="text-content">
+            <h2> Skills </h2>
+            <p> R </p>
+            <p> Familiarity with Linux </p>   
+            <p> Bash script development </p>
+            <p>  Use of a range of bioinformatic tools   </p>
+        </div>
+    </div>
+    <div class="card">
         <div>
             <img class="fakeimg" src="{% static 'homePage/images/grocerlyst3.png' %}" alt="Ohio">
         </div>       
         <div class="text-content" style = "text-align: left;">
             <h2>GrocerLyst</h2>
-            <p>As part of a 4 person group, I developed the backend and recommendation engine in GrocerLyst, a collaborative shopping list web app that encourages healthy eating</p>
+            <p>As part of a team, I developed the backend and recommendation engine in GrocerLyst, a collaborative shopping list web app that encourages healthy eating</p>
         </div>
         <div class="text-content">
             <h2> Skills </h2>
@@ -48,7 +92,7 @@
         </div>
         <div class="text-content" style = "text-align: left;">
             <h2>GFF viewer</h2>
-            <p>Acommand line bioinformatics project that takes gff files from Prokka and Bakta outputs and converts them into PNG </p>
+            <p>A command line bioinformatics project that takes gff files from Prokka and Bakta outputs and converts them into PNG </p>
         </div>
         <div class="text-content">
             <h2> Skills </h2>
@@ -59,6 +103,22 @@
         </div>      
     </div>
 
+    <div class="card">
+        <div>
+            <img class="fakeimg" src="{% static 'homePage/images/usa.png' %}" alt="Ohio">
+        </div>
+        <div class="text-content">
+            <h2>Branch Tracker</h2>
+            <p>A simple visualisation tool to gain a full understanding of how control over the three branches of the US federal government has evolved over time</p>
+        </div>
+        <div class="text-content">
+            <h2> Skills </h2>
+            <p> Web scraping  </p>
+            <p> Data visualisation and analysis </p>
+            <p> GUI development </p>
+        </div>      
+    </div>
+<!--
     <div class="card">
         <div>
             <img class="fakeimg" src="{% static 'homePage/images/Ohio.png' %}" alt="Ohio">
@@ -75,6 +135,7 @@
             <p> Statistical Analyses  </p>   
         </div>      
     </div>
+-->
     
 
     <div class="card">
@@ -110,7 +171,7 @@
     <div class="footer-container">
         <div class="footer-section">
             <h3>About Sadiq Khawaja</h3>
-            <p>Student at St George's University completing an undergraduate in bioinformatics. Interested in pretty much anything that tells a good storys</p>
+            <p>Student at St George's University completing an undergraduate in biomedical science.</p>
         </div>
         <div class="footer-section">
             <h3>Quick Links</h3>
@@ -133,14 +194,13 @@
         </div>
         </div>
         <div class="footer-section">
-            <h3>Gallery</h3>
             <div class="footer-gallery">
                 <!-- Small gallery or image grid -->
             </div>
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2023 Sadiq Khawaja. All Rights Reserved.</p>
+        <p>&copy; 2023 Sadiq Khawaja. All Rights Reserved. All Images Made With Dall-E 3</p>
     </div>
 </footer>
 

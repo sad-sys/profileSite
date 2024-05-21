@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'homePage/css/homePage.css' %}">
+</head>
+<body>
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="default">Updates</a></li>
+        <li><a href="Thoughts">Thoughts</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="{% url 'about' %}">About Me</a></li>
+    </ul>
+    <div class="aboutSection" style="opacity: 1; margin-top: 8vh; margin-left: 20vh;">
+        <div>
+            <img class="fakeimg" src="{% static 'homePage/images/about.png' %}" alt="about">
+        </div>       
+        <div class="text-content" style = "text-align: left;">
+            <h2>Hi, I'm Sadiq</h2>
+            <p>I'm an undergrad in biomedical science at St George's University.  </p>
+        </div>
+    </div>
+</body>
+</html>

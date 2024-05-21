@@ -6,5 +6,5 @@ def homePage(request):
     # Render the 'homepage.html' template with the context
     return render(request, 'homepage.html')
 
-def projects(request):
-    return render(request, 'projects.html')
+def about(request):
+    return render(request, 'about.html')
